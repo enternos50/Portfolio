@@ -1,0 +1,54 @@
+  /* Réinitialisation de base */
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box; /* Bonne pratique pour le calcul des largeurs */
+        }
+
+        body {
+            font-family: Arial, sans-serif; 
+            background: #000000
+ 
+           
+        }
+        
+        /* Ajustement du corps pour décaler le contenu sous la navbar fixe */
+        /* La valeur doit être approximativement la hauteur de la navbar (environ 56-60px) */
+       
+
+        /* Styles pour la barre de navigation (NAVBAR) */
+        .navbar {
+            /* 1. Transparence (rgba) + Écrase le style de Bootstrap */
+            background-color: rgba(0, 0, 0, 0) !important; 
+            
+            /* 2. Positionnement FIXE en haut de la page */
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            z-index: 1030; /* Assure qu'elle est au-dessus du reste du contenu */
+        }
+        
+        /* Couleur du texte de la navigation (liens et marque) */
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: white !important; /* Force le texte à être blanc pour la lisibilité sur fond sombre */
+        }
+        
+        /* Style des liens actifs pour plus de contraste */
+        .navbar .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Styles des images */
+        img.img-fluid {
+            width: 100%;  
+            height: auto;
+            margin-bottom: 20px; /* Conserve la marge pour séparer du contenu suivant */
+        }
+        
+        /* Ajustement pour l'image du logo dans la navbar */
+        .navbar-brand img {
+            width: 50px; 
+            height: auto;
+        }
