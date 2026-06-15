@@ -6,10 +6,44 @@
       /* Bonne pratique pour le calcul des largeurs */
   }
 
+  @keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   body {
       font-family: Arial, sans-serif;
       background: linear-gradient(#01083c, #000000)
   }
+
+ .hero-title {
+  font-size: 8rem;
+  font-weight: 900;
+
+  background: linear-gradient(
+    90deg,
+    #a855f7,
+    #4e27e9,
+    #ec4899,
+    #a855f7
+  );
+
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation: gradientMove 6s ease-in-out infinite;
+}
+
+
 
 
   .imgBack h1 {
